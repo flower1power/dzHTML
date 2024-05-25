@@ -8,10 +8,10 @@
   </head>
   <body>
     <main>
-      <form action="#" name="register">
+      <form action="#" name="register" class="register">
         <h1>Регистрация</h1>
         <p>Уже есть аккаунт? <a href="#">Войти</a></p>
-        <div>
+        <div class="inputs">
           <input
             id="company"
             type="text"
@@ -19,24 +19,22 @@
             name="company"
             required
           />
-        </div>
-        <div>
-          <input
-            type="text"
-            placeholder="Имя"
-            name="firstname"
-            id="firstname"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Фамилия"
-            name="lastname"
-            id="lastname"
-            required
-          />
-        </div>
-        <div>
+          <div class="name-group">
+            <input
+              type="text"
+              placeholder="Имя"
+              name="firstname"
+              id="firstname"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Фамилия"
+              name="lastname"
+              id="lastname"
+              required
+            />
+          </div>
           <input
             type="email"
             placeholder="E-mail"
@@ -44,18 +42,15 @@
             id="email"
             required
           />
-        </div>
-        <div>
           <button type="submit">
             Зарегистрироваться
-            <img src="../2-Form/images/Arrow1.png" alt="Стрелока далее" />
           </button>
-        </div>
-        <div>
-          <input type="checkbox" name="accepted" id="accepted" required />
-          <label for="accepted"
-            >Я прочитал и принимаю <a href="#">Условия использования</a></label
-          >
+          <div class="checkbox-container">
+            <input type="checkbox" name="accepted" id="accepted" required />
+            <label for="accepted">
+              Я прочитал и принимаю <a href="#">Условия использования</a>
+            </label>
+          </div>
         </div>
       </form>
     </main>
