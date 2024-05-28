@@ -1,108 +1,139 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+}
+
 body {
   background: linear-gradient(180deg, #374151 0%, #111827 100%);
-  margin: 0;
-  padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 header {
-  padding: 80px 180px;
+  padding: 70px 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-main {
-  padding: 0px 180px;
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 50px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
-footer {
-  padding: 77px 180px;
-}
-
-header a {
+a {
   color: #fff;
   font-size: 16px;
   text-decoration: none;
 }
 
-ul li {
-  list-style: none;
+ul li:first-child a {
+  font-size: 18px;
 }
 
-nav {
-  margin: 0;
+ul li:first-child a::before {
+  content: "В";
+  background-color: #4b5563;
+  border-radius: 3px;
+  padding: 6px 12px;
+  margin-right: 11px;
 }
 
-small {
-  color: #ffffff99;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.41px;
+main {
+  padding: 0px 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-footer div {
-  margin: 0 auto;
-  width: 226px;
+.topSmall {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
 }
 
 h1 {
   color: #fff;
   font-size: 24px;
-  font-weight: 400;
   line-height: 38px;
-  margin: 0 0 30px 0;
   text-align: center;
+  margin: 14px 0 30px;
 }
 
+.developer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 31px;
+}
+
+.name {
+  margin: 0;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 p {
   color: #fff;
-  font-weight: 400;
   font-size: 16px;
-  
-}
-
-main section{
-  text-align: center;
-}
-
-
-
-.mainText p {
-  line-height: 30px;
-  text-align: left;
+  margin: 0;
 }
 
 .mainText p:first-of-type {
   font-size: 20px;
-  line-height: 32px;
-}
-
-.topSmall {
-  margin: 0 auto 14px;
-  width: 180px;
-  line-height: 28px;
-}
-
-.developer {
-  width: 214px;
-  margin: 0 auto 28px;
 }
 
 .mainText {
-  margin: 0 185px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 69px 185px 0 185px;
+}
+
+footer {
+  padding: 77px 180px;
+  display: flex;
+  justify-content: center;
+}
+
+small {
+  color: #ffffff99;
+  font-size: 14px;
 }
 
 .search {
+  position: relative;
+  display: inline-block;
+}
+
+input {
   background-color: #1f293799;
   border-radius: 100px;
   border: none;
   height: 40px;
   padding: 11px 0 11px 49px;
+  width: 100%;
+  font-size: 16px;
+  color: #fff;
+}
+
+.search-img {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .footerSmall {
   font-size: 16px;
-  line-height: 28px;
-}
-
-.name {
-  line-height: 28px;
 }
