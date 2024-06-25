@@ -1,0 +1,284 @@
+.section {
+  overflow: visible;
+  display: flex;
+  flex-direction: row;
+}
+
+.hero {
+  background-color: var(--color-bg-primary);
+
+  min-height: 480px;
+}
+
+.advantages {
+  margin: 50px 0 0;
+  /*gap: 23px 64px*/
+}
+
+.comparison {
+  background-color: var(--color-bg-primary);
+}
+
+.tariff {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tariff-card {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  > .button {
+    width: 100%;
+  }
+}
+
+.mobile-version {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.customer-support {
+  padding: 0;
+}
+
+.hero__left {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  min-width: 452px;
+  gap: 40px;
+}
+
+.hero__title {
+  color: var(--color-text);
+  font-weight: 800;
+  line-height: 120%;
+}
+
+.title {
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.title_24 {
+  font-size: 24px;
+}
+
+.title_28 {
+  font-size: 28px;
+}
+
+.title_32 {
+  font-size: 32px;
+}
+
+.title_40 {
+  font-size: 40px;
+}
+
+.title_48 {
+  font-size: 48px;
+}
+
+.partner {
+  margin-top: 40px;
+}
+
+.advantages__wrapper {
+  max-width: var(--layout-width);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-content: space-between;
+  margin: 0 auto 80px;
+  gap: 32px 64px;
+  overflow: hidden;
+}
+
+.wrapper__presentations {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.wrapper__comparison {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--layout-width);
+  margin: 120px auto;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wrapper__advantage {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(328px, 1fr));
+  max-width: var(--layout-width);
+  gap: 78px;
+  margin: 120px auto;
+  overflow: hidden;
+}
+
+.wrapper__mobile-version {
+  max-width: var(--layout-width);
+  margin: 0 auto;
+
+  &::before {
+    content: '';
+    background: var(--color-separator);
+    position: absolute;
+    top: 0;
+    height: 1px;
+    width: 83%;
+    display: block;
+  }
+}
+
+.wrapper__customer-support {
+  background: var(--color-bg-primary);
+  box-shadow: var(--shadow-size) var(--color-shadow-medium);
+  border-radius: var(--border-16);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  gap: 48px;
+  padding: 80px 24px 0;
+  max-width: var(--layout-width);
+  margin: 0 auto 80px;
+}
+
+@media (max-width: 1280px) {
+  .hero {
+    padding: 0 24px 0 24px;
+  }
+
+  .advantages {
+    padding: 0 24px;
+  }
+
+  .wrapper__presentations {
+    padding: 0 24px 0 24px;
+  }
+
+  .wrapper__comparison {
+    padding: 0 24px 0 24px;
+  }
+
+  .mobile-version {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 64px;
+  }
+
+  .wrapper__customer-support {
+    padding: 80px 24px 0 24px;
+  }
+
+  .tariff__wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 0;
+  }
+
+  .tariff-card {
+    padding: 48px 24px;
+  }
+
+  .tariff {
+    /* padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 0; */
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 1095px) {
+  .wrapper__advantage {
+    padding: 0 24px;
+    align-items: center;
+    gap: 24px 80px;
+    margin: 64px auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper__comparison {
+    margin: 64px auto;
+  }
+
+  .mobile-version {
+    padding-top: 48px;
+  }
+
+  .wrapper__customer-support {
+    flex-direction: column-reverse;
+    border-radius: 0;
+  }
+
+  .customer-support__body {
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .title_28 {
+    font-size: 24px;
+  }
+
+  .title_32 {
+    font-size: 28px;
+  }
+
+  .title_40 {
+    font-size: 36px;
+  }
+
+  .title_48 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title_32 {
+    font-size: 24px;
+  }
+
+  .title_40 {
+    font-size: 32px;
+  }
+
+  .title_48 {
+    font-size: 40px;
+  }
+
+  .hero__left {
+    min-width: auto;
+    gap: 32px;
+  }
+
+  .hero__image {
+    display: none;
+  }
+
+  .hero__left button {
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 140%;
+  }
+
+  .partner {
+    max-width: 264px;
+    margin: 24px 0 32px;
+  }
+}
